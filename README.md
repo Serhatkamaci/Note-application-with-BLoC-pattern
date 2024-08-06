@@ -1,16 +1,9 @@
-# notes_app_sqlite_block_pattern
+Bu çalışmada, Flutter framework'ünde Bloc mimarisini kullanarak bir not uygulaması geliştirdim. Uygulamam, "database" adlı klasörde bulunan "notuygulamasi.sqlite" veritabanına bağlıdır. Projede, pubspec.yaml dosyasına eklediğim paketler arasında "flutter_bloc," "sqflite" ve "path" paketleri bulunmaktadır. Path paketini kullanmamın nedeni, veritabanının her cihazda ortak bir dizinde bulunmasını sağlayarak dinamik bir yapı oluşturmak idi. Flutter_bloc paketini tercih etmemin sebebi ise, arayüzdeki güncellemeleri dinleme ve tetikleme yöntemi ile yalnızca güncellenen kısmın yeniden render edilmesini sağlamaktır. Bu sayede, uygulamanın daha verimli çalışmasını sağladım. Sqflite paketini ise SQLite veritabanına "insert," "delete," "select" ve "update" gibi sorgular ile erişim sağlamak ve veri yönetimi için kullandım.
 
-A new Flutter project.
+Uygulamayı çalıştırdığınızda ilk olarak Notlar sayfası açılacak ve appbar üzerinde notlara ait ortalamayı görebileceksiniz. Anasayfa üzerinde notları silme imkanı da sağladım. Icon widget'ı içerisindeki delete ikonuna bastığınızda, 10 saniye boyunca ekranda kalacak bir snackbar ile karşılaşacaksınız. Snackbar üzerinde bulunan "Evet" butonuna tıkladığınızda, istediğiniz dersi silebileceksiniz. Notlar uygulaması ekranında bulunan Card widget'ı üzerinde tıkladığınızda, notların detaylarını Not Detay sayfasında görebileceksiniz. Bu sayfada ayrıca, appbar üzerinde bulunan TextButton sayesinde güncelleme yapabileceksiniz. Son olarak, Notlar Uygulaması ekranında bulunan FloatingActionButton'a tıklayarak Not Kayıt sayfasında derslere ait not girişini gerçekleştirebileceksiniz. Dinlediğiniz için teşekkür ederim.
 
-## Getting Started
+--------------------------------------------------
 
-This project is a starting point for a Flutter application.
+In this study, I developed a note application using the Bloc architecture in the Flutter framework. My application is connected to the "notuygulamasi.sqlite" database located in the "database" folder. Among the packages I added to the pubspec.yaml file in the project are the "flutter_bloc," "sqflite" and "path" packages. The reason I used the path package was to create a dynamic structure by ensuring that the database is in a common directory on each device. The reason I preferred the flutter_bloc package is to listen to and trigger updates in the interface and to re-render only the updated part. In this way, I made the application work more efficiently. I used the sqflite package to access the SQLite database with queries such as "insert," "delete," "select" and "update" and for data management.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+When you run the application, the Notes page will first open and you will be able to see the average of the notes on the appbar. I also provided the opportunity to delete notes on the homepage. When you click on the delete icon in the Icon widget, you will see a snackbar that will remain on the screen for 10 seconds. When you click on the "Yes" button on the snackbar, you will be able to delete the course you want. When you click on the Card widget on the Notes application screen, you will be able to see the details of the notes on the Notes Detail page. On this page, you will also be able to update using the TextButton on the appbar. Finally, you will be able to enter notes for the courses on the Notes Recording page by clicking on the FloatingActionButton on the Notes Application screen. Thank you for listening.
